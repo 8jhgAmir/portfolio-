@@ -16,16 +16,16 @@
         .lang-btn { background: var(--primary); color: var(--gold); border: 2px solid var(--gold); padding: 10px 25px; cursor: pointer; font-weight: 700; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .lang-btn:hover { background: var(--gold); color: var(--primary); transform: scale(1.05); }
 
-        /* Modern Header */
-        header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 120px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); position: relative; }
-        header h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin: 0; font-weight: 800; }
-        header p { font-size: 1.5rem; color: var(--gold); margin-top: 15px; font-weight: 300; }
+        /* Modern Header with Photo */
+        header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); position: relative; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--gold); margin-bottom: 20px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: inline-block; }
+        header h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0; font-weight: 800; }
+        header p { font-size: 1.3rem; color: var(--gold); margin-top: 10px; font-weight: 300; }
 
         /* Floating Nav */
         nav { background: var(--glass); backdrop-filter: blur(12px); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
         nav a { color: var(--primary); margin: 0 15px; text-decoration: none; font-weight: 600; position: relative; }
-        nav a:after { content: ''; width: 0; height: 2px; background: var(--gold); position: absolute; bottom: -5px; right: 0; transition: 0.3s; }
-        nav a:hover:after { width: 100%; }
+        nav a:hover { color: var(--accent); }
 
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         .card { background: var(--white); padding: 40px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 30px; position: relative; overflow: hidden; }
@@ -35,14 +35,12 @@
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .service-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; text-align: center; }
         .service-card i { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
-        .service-card:hover { border-color: var(--gold); transform: translateY(-10px); background: #fafafa; }
 
         /* Contact Section */
         .contact-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px; }
-        .contact-btn { display: flex; flex-direction: column; align-items: center; background: #f8fafc; padding: 25px; border-radius: 18px; text-decoration: none; color: var(--primary); border: 1px solid #e2e8f0; }
+        .contact-btn { display: flex; flex-direction: column; align-items: center; background: #f8fafc; padding: 25px; border-radius: 18px; text-decoration: none; color: var(--primary); border: 1px solid #e2e8f0; text-align: center; }
         .contact-btn i { font-size: 2.2rem; margin-bottom: 12px; color: var(--accent); }
         .contact-btn:hover { background: var(--primary); color: white; transform: translateY(-5px); }
-        .contact-btn:hover i { color: var(--gold); }
 
         /* Bi-Lingual Logic */
         .en-mode { direction: ltr !important; }
@@ -50,10 +48,8 @@
         [lang="en"] { display: none; }
         .en-mode [lang="fa"] { display: none; }
         .en-mode [lang="en"] { display: block; }
-        .en-mode .contact-btn { text-align: center; }
 
         footer { background: var(--primary); color: white; text-align: center; padding: 50px 20px; margin-top: 80px; }
-        .address-text { font-style: normal; line-height: 1.8; color: #64748b; }
     </style>
 </head>
 <body id="bodyTag">
@@ -63,6 +59,7 @@
 </div>
 
 <header>
+    <img src="mohammad SN.jpg" alt="Mohammad Seyednourani" class="profile-img">
     <h1 lang="fa">محمد سیدنورانی</h1>
     <h1 lang="en">Mohammad Seyednourani</h1>
     <p lang="fa">استراتژیست مالی و مشاور ارشد کسب‌وکار</p>
@@ -103,46 +100,33 @@
     </section>
 
     <section id="contact" class="card">
-        <h2 lang="fa"><i class="fas fa-address-book"></i> اطلاعات تماس و موقعیت</h2>
-        <h2 lang="en"><i class="fas fa-address-book"></i> Contact & Location</h2>
+        <h2 lang="fa"><i class="fas fa-address-book"></i> اطلاعات تماس</h2>
+        <h2 lang="en"><i class="fas fa-address-book"></i> Contact Info</h2>
+        <p><i class="fas fa-map-marker-alt"></i> 15 Balf St, Richmond Hill, ON, Canada</p>
         
-        <div class="address-text">
-            <p lang="fa"><i class="fas fa-map-marker-alt"></i> <strong>آدرس دفتر:</strong> تورنتو، ریچموند هیل، خیابان بالف، پلاک ۱۵</p>
-            <p lang="en"><i class="fas fa-map-marker-alt"></i> <strong>Office:</strong> 15 Balf St, Richmond Hill, ON, Canada</p>
-        </div>
-
         <div class="contact-box">
             <a href="tel:+14169490179" class="contact-btn">
                 <i class="fas fa-phone-alt"></i>
-                <span lang="fa">تماس مستقیم</span><span lang="en">Direct Call</span>
+                <span lang="fa">تماس</span><span lang="en">Call</span>
                 <small dir="ltr">+1 (416) 949-0179</small>
             </a>
             <a href="mailto:amirsn121@gmail.com" class="contact-btn">
-                <i class="fas fa-envelope-open-text"></i>
-                <span lang="fa">ارسال ایمیل</span><span lang="en">Email Me</span>
-                <small dir="ltr">amirsn121@gmail.com</small>
+                <i class="fas fa-envelope"></i>
+                <span lang="fa">ایمیل</span><span lang="en">Email</span>
+                <small>amirsn121@gmail.com</small>
             </a>
             <a href="https://wa.me/14169490179" target="_blank" class="contact-btn">
                 <i class="fab fa-whatsapp"></i>
                 <span lang="fa">واتس‌اپ</span><span lang="en">WhatsApp</span>
-                <small lang="fa">گفتگوی فوری</small><small lang="en">Instant Chat</small>
-            </a>
-            <a href="https://www.google.com/maps/search/15+Balf+St,+Richmond+Hill,+ON" target="_blank" class="contact-btn">
-                <i class="fas fa-map-marked-alt"></i>
-                <span lang="fa">مشاهده نقشه</span><span lang="en">View on Map</span>
-                <small>Richmond Hill</small>
+                <small>Instant Chat</small>
             </a>
         </div>
     </section>
 </div>
 
 <footer>
-    <div style="margin-bottom: 20px;">
-        <i class="fab fa-linkedin fa-2x" style="margin: 0 15px; cursor:pointer;"></i>
-        <i class="fab fa-instagram fa-2x" style="margin: 0 15px; cursor:pointer;"></i>
-    </div>
-    <p lang="fa">© ۲۰۲۶ - تمام حقوق برای پورتفولیو رسمی محمد سیدنورانی محفوظ است</p>
-    <p lang="en">© 2026 - Official Portfolio of Mohammad Seyednourani. All Rights Reserved.</p>
+    <p lang="fa">© ۲۰۲۶ - تمام حقوق برای محمد سیدنورانی محفوظ است</p>
+    <p lang="en">© 2026 - All Rights Reserved for Mohammad Seyednourani</p>
 </footer>
 
 <script>
